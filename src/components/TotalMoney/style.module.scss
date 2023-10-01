@@ -1,0 +1,24 @@
+.money {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid var(--grey-2-light);
+  margin-top: 30px;
+  padding: 10px;
+
+  .totalValue {
+    display: flex;
+    justify-content: space-between;
+
+    .span {
+      color: var(--pink-2);
+      font-weight: 800;
+      font-size: 20px;
+    }
+  }
+
+  .p {
+    font-size: 15px;
+  }
+
+}
