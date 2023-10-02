@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Card } from "../Card/card.jsx";
-import "./list.css";
+import styles from "./style.module.scss";
 
 export const currency = function (number) {
   return new Intl.NumberFormat("pt-BR", {
@@ -17,58 +17,9 @@ export function List({ listTransactions, removeElement }) {
 
   return (
     <>
-      <ul className="list">
-        <div className="list_filter">
-          <p>Resumo financeiro</p>
-
-          <div className="list_filter__buttons">
-            <button
-              style={{ backgroundColor: "#e34981" }}
-              value="todos"
-              onClick={(event) => {
-                setFilter("");
-                const butReceived = document.getElementById("received");
-                const butExit = document.getElementById("exit");
-                event.target.style.backgroundColor = "#e34981";
-                butExit.style.backgroundColor = "#e9ecef";
-                butReceived.style.backgroundColor = "#e9ecef";
-              }}
-              id="all"
-            >
-              Todos
-            </button>
-
-            <button
-              value="entrada"
-              onClick={(event) => {
-                setFilter("entrada");
-                const butAll = document.getElementById("all");
-                const butExit = document.getElementById("exit");
-                event.target.style.backgroundColor = "#e34981";
-                butAll.style.backgroundColor = "#e9ecef";
-                butExit.style.backgroundColor = "#e9ecef";
-              }}
-              id="received"
-            >
-              Entradas
-            </button>
-
-            <button
-              value="saida"
-              onClick={(event) => {
-                setFilter("saida");
-                const butAll = document.getElementById("all");
-                const butReceived = document.getElementById("received");
-                event.target.style.backgroundColor = "#e34981";
-                butReceived.style.backgroundColor = "#e9ecef";
-                butAll.style.backgroundColor = "#e9ecef";
-              }}
-              id="exit"
-            >
-              Despesas
-            </button>
-          </div>
-        </div>
+      <ul className={styles.list}>
+          <p className={styles.p}>Resumo financeiro</p>
+          
 
         {listTransactions.map((transaction, index) => {
           if (filter == "") {

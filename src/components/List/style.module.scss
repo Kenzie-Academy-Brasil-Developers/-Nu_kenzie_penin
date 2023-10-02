@@ -1,0 +1,67 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 70%;
+  margin-top: 5vh;
+
+  
+
+    .p {
+      white-space: nowrap;
+      font-weight: 700;
+      font-size: 20px;
+    }
+  
+
+  .list_filter__buttons {
+    display: flex;
+    gap: 20px;
+
+    .button__filter {
+      padding: 10.5px 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .button__filter:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 990px){
+  .list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .list_filter {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 550px) {
+  .list_filter {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+}

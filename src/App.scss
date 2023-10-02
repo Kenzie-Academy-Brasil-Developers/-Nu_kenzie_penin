@@ -58,13 +58,16 @@ button{
 }
 
 .noTransactions div {
-  background-image: url(./Assets/NoCard.svg);
   height: 100%;
   width: 600px;
   background-repeat: no-repeat;
   background-position: center 5%;
   background-size: contain;
   padding-right: 10px;
+}
+
+.form_box{
+  width: 50%;
 }
 
 @media (max-width: 1160px) {
@@ -77,7 +80,12 @@ button{
   .App {
     flex-direction: column;
     align-items: center;
+
+    .form_box{
+    width: 100%;
   }
+  }
+  
 }
 @media (max-width: 430px) {
   .form_box {

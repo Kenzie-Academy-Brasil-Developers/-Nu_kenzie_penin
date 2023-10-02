@@ -1,0 +1,120 @@
+.form {
+  height: auto;
+  width: 90%;
+  margin-top: 5vh;
+  border: 1px solid var(--grey-2-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 38px 23px;
+  border-radius: 5px;
+  gap: 15px;
+
+
+  .div1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+
+    .input1 {
+      height: 52.8px;
+      border-radius: 10px;
+
+    }
+
+  }
+
+  .div1::-webkit-outer-spin-button,
+  .input1::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+
+
+  .form_values {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .div2 {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .form_values_input {
+
+        background-color: var(--grey-1-white);
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 16px;
+        height: 52.8px;
+        border-radius: 10px;
+
+      }
+    }
+
+    .type__value {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .select {
+        background-color: var(--grey-1-white);
+        box-sizing: border-box;
+       padding: 15px;
+        font-size: 16px;
+        height: 52.8px;
+        width: auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        
+
+        .options {
+
+          border-radius: 10px;
+          background-color: var(--grey-1-white);
+          border: none;
+          text-align: center;
+        }
+      }
+
+    }
+
+    .select:hover {
+      cursor: pointer;
+    }
+
+    .select:focus {
+
+      outline: none;
+      cursor: pointer;
+      background-color: var(--grey-2-light);
+      border-radius: 10px;
+    }
+
+  }
+  .button {
+      height: 52.8px;
+      border-radius: 10px;
+      background-color: var(--pink-2);
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+    }
+}
+
+
+
+
+@media (max-width: 430px) {
+  .form {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+
+  }
+}

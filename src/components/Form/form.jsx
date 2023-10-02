@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./form.css";
-// import { toasty } from "../toasty/toasty.js";
+import styles from "./style.module.scss";
+
 
 export const Form = ({ listTransactions, setListTransactions }) => {
   const [transactionValue, setTransactionValue] = useState("");
@@ -33,7 +33,7 @@ export const Form = ({ listTransactions, setListTransactions }) => {
       setTransactionDescription("");
     } else {
       alert("preencha todos os campos")
-      // toasty("inserir os valores", "#db3d5a")
+      
     }
   }
 
@@ -42,10 +42,11 @@ export const Form = ({ listTransactions, setListTransactions }) => {
   }
 
   return (
-    <form className="form" onSubmit={(event) => event.preventDefault()}>
-      <div>
+    <form className={styles.form} onSubmit={(event) => event.preventDefault()}>
+      <div className={styles.div1}>
         <p>Descrição</p>
         <input
+          className={styles.input1}
           type="text"
           name="descrição"
           value={transactionDescription}
@@ -58,11 +59,11 @@ export const Form = ({ listTransactions, setListTransactions }) => {
         <span>Ex: Compra de roupas</span>
       </div>
 
-      <section className="form_values">
-        <div>
-          <p>Valor</p>
+      <section className={styles.form_values}>
+        <div className={styles.div2}>
+          <p>Valor (R$)</p>
           <input
-            className="form_values_input"
+            className={styles.form_values_input}
             type="number"
             step="0.01"
             name="valor_transção"
@@ -73,16 +74,16 @@ export const Form = ({ listTransactions, setListTransactions }) => {
             }}
           />
         </div>
-        <div>
+        <div className={styles.type__value}>
           <p>Tipo de valor</p>
-          <select name="" value={transactionType} onChange={changeType}>
-            <option value="entrada">Entrada</option>
-            <option value="saida">Saída</option>
+          <select className={styles.select} name="" value={transactionType} onChange={changeType}>
+            <option className={styles.options} value="entrada">Entrada</option>
+            <option className={styles.options} value="saida">Saída</option>
           </select>
         </div>
       </section>
 
-      <button type="submit" onClick={(x) => addValue()}>
+      <button className={styles.button} type="submit" onClick={(x) => addValue()}>
         Inserir valor
       </button>
     </form>
