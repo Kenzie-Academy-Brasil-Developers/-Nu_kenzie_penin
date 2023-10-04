@@ -28,7 +28,15 @@ function App() {
             listTransactions={listTransactions}
             setListTransactions={setListTransactions}
           ></Form>
-          <TotalMoney listTransactions={listTransactions} />
+          {listTransactions.length > 0 ? (
+            <TotalMoney
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+              removeElement={removeElement}
+            ></TotalMoney>
+          ) : (
+          <div></div>
+          )}
         </div>
 
         {listTransactions.length > 0 ? (

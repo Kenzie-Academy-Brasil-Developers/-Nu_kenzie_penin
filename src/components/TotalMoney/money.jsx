@@ -3,6 +3,7 @@ import styles from "./style.module.scss";
 import { Title } from "../secondaryTitle/secondaryTitle.jsx";
 
 export const TotalMoney = ({ listTransactions }) => {
+  
   return (
     <div className={styles.money}>
       <div className={styles.totalmoney}>
